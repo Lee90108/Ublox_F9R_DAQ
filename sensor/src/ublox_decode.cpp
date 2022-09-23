@@ -111,13 +111,13 @@ char Ublox_8_DEQUEUE(unsigned int* packet, size_t Sz)
 			switch (data_type)
    			{
        			case gyroX:
-       				 imu.GyroX = pow(2, -12)*Intbit24Tofloat(payload, idx);
+       				 imu.GyroX = pow(2, -12)*Intbit24Tofloat(payload, idx)*M_PI/180;
             			break;
        			case gyroY:
-       				 imu.GyroY = pow(2, -12)*Intbit24Tofloat(payload, idx);
+       				 imu.GyroY = pow(2, -12)*Intbit24Tofloat(payload, idx)*M_PI/180;
             			break;
        			case gyroZ:
-       				 imu.GyroZ = pow(2, -12)*Intbit24Tofloat(payload, idx);
+       				 imu.GyroZ = pow(2, -12)*Intbit24Tofloat(payload, idx)*M_PI/180;
             			break;
        			case accX:
        				 imu.AccX = pow(2, -10)*Intbit24Tofloat(payload, idx);
