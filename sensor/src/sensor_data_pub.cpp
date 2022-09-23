@@ -145,7 +145,7 @@ int main(int argc, char * argv[])
 	auto port = boost::asio::serial_port(ioService);
 
 	boost::system::error_code ec;
-	port.open("/dev/ttyACM1", ec);
+	port.open("/dev/ttyACM0", ec);
 
 	auto opt_baud = boost::asio::serial_port_base::baud_rate(115200);
 	auto opt_parity = serial_port_base::parity(serial_port_base::parity::none);
