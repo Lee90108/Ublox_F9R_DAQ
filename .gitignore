@@ -81,3 +81,9 @@ COLCON_IGNORE
 AMENT_IGNORE
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,ros2,c++
+
+# custom
+/bag_files
+*.in
+*.swn
+*.swo
